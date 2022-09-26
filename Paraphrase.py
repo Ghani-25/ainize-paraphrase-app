@@ -10,9 +10,9 @@ app = FastAPI()
 app.mount("/public", StaticFiles(directory="public"), name="public")
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-tokenizer = T5TokenizerFast.from_pretrained('./Model')
-model = T5ForConditionalGeneration.from_pretrained('./Model').to(device)
-sen_model = SentenceTransformer('paraphrase-MiniLM-L3-v2').to(device)
+tokenizer = T5TokenizerFast.from_pretrained('Ghani-25/predy')
+model = T5ForConditionalGeneration.from_pretrained('Ghani-25/predy').to(device)
+sen_model = SentenceTransformer('paraphrase-multilingual-mpnet-base-v2').to(device)
 
 # Format used in training to tell the model how much to vary inputted text
 distance = {1: "small", 2: "medium", 3: "large", 4: "gigantic"}
