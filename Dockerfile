@@ -1,4 +1,4 @@
-FROM imjeffhi4/paraphrasemodel
+FROM ghani25/paraphrasemodel
 
 WORKDIR /app
 
